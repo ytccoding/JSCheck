@@ -22,10 +22,10 @@ test_web = ytFuntion.test_web(webDriver)
 wb = load_workbook("檢查JS用_H5.xlsx")
 sheet = wb["web"] # 獲取一張表
 
-testWebUrl = input("請輸入測試站點的url(Ex.http://m.winvip66.acgtest.com):").strip()
+testWebUrl = input("請輸入測試站點的url(Ex.http://m.yingjia66.duasla.com):").strip()
 sheet["A1"].value = testWebUrl
 webDriver.get(str(testWebUrl) + str(sheet["D2"].value).strip())
-testSiteID = input("請輸入測試SiteID:")
+testSiteID = input("請輸入測試SiteID(不修改請直接enter):")
 sheet["A2"].value = testSiteID
 j = 0
 for i in range(8,13):#找siteID所在位置
