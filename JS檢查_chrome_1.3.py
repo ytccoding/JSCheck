@@ -30,7 +30,9 @@ for i in range(1,len(sheetAccount["A"])+1):
         testSiteID = str(sheetAccount["G" + str(i)].value).strip()
         sheet["A2"].value = testSiteID
         account = str(sheetAccount["E" + str(i)].value).strip()
+        sheet["K1"].value = account
         password = str(sheetAccount["F" + str(i)].value).strip()
+        sheet["M1"].value = password
         textCheck = str(sheetAccount["H" + str(i)].value).strip()
     
 j = 0
