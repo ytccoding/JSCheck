@@ -33,11 +33,11 @@ for i in range(1,len(sheetAccount["A"])+1):
         webDriver.get(str(testWebUrl) + str(sheet["D2"].value).strip())
         testSiteID = str(sheetAccount["G" + str(i)].value).strip()
         sheet["A2"].value = testSiteID
-        account = str(sheetAccount["E" + str(i)].value).strip()
+        account = str(sheetAccount["E" + str(i)].value).strip() #帳號
         sheet["K1"].value = account
-        password = str(sheetAccount["F" + str(i)].value).strip()
+        password = str(sheetAccount["F" + str(i)].value).strip() #密碼
         sheet["M1"].value = password
-        textCheck = str(sheetAccount["H" + str(i)].value).strip()
+        textCheck = str(sheetAccount["H" + str(i)].value).strip() #檢查目標
         if str(sheetAccount["I" + str(i)].value).strip() == "None":
             waitSec = 10
         else:
@@ -105,4 +105,5 @@ for i in range(2 ,len(sheet["B"])+1):
         
 wb.save(str(testSiteID) + "_" + "JS檢查報告_chrome_H5_" + str(time.strftime("%y_%m_%d_%H_%M_%S") + ".xlsx"))
 webDriver.quit()
+
 
